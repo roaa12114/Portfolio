@@ -1,0 +1,184 @@
+.about-section {
+  background-color: #101010;
+  color: #fff;
+  padding-top: 100px; /* مسافة من فوق */
+  padding-bottom: 60px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* الصورة */
+.about-image-wrapper {
+  position: relative;
+  width: 50%;
+  margin: 0 100px 0px;
+}
+
+.about-image {
+  width: 70%;
+  display:block;
+  z-index: 1;
+  position: relative;
+}
+
+/* الخط الأبيض اللي طالع من الصورة */
+.horizontal-line {
+  position: absolute;
+  top: 0%;
+  right: -75%;
+  width: 175%;
+  height: 2.5px;
+  background-color: white;
+  transform: translateY(-50%);
+  opacity: 0.6;
+}
+
+/* العنوان */
+.about-title {
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-top: -550px;
+  margin-bottom: 40px;
+  margin-left: 550px;
+  font-family: "bungee", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: (34, 28, 45, 0.9)
+}
+
+.sub-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-left: 550px; /* نفس المارجن بتاع العنوان */
+  margin-top: 10px;   /* مسافة بسيطة بينه وبين العنوان */
+  color: #c5b7ff;     /* موف ناعم متناسق مع ألوانك */
+  font-family: "Poppins", sans-serif;
+}
+
+/* البوكس بتاع الكلام */
+.about-text-box {
+  position: relative;
+  background-color: #7d7979;
+  width: 50%;
+  margin: 320PX 480px 0PX 480px;
+  padding: 15px 20px ;
+  border-radius: 0px;
+  box-shadow: 0 10px 30px rgba(202, 160, 255, 0.3);
+  z-index: 2;
+  transform: translateY(-120px); /* يخليه يغطي الصورة شوية */
+
+}
+
+.about-text-box p {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.8;
+  color: #252424;
+}
+
+/* الفاصل بين الصفحة واللي بعدها */
+.page-divider {
+  margin-top: 0px;
+  width: 85%;
+  height: 2.5px;
+  background-color: white;
+  opacity: 0.6;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 992px) {
+  .about-image-wrapper {
+    width: 90%;
+  }
+
+  .horizontal-line {
+    display: none; /* نخفي الخط في الموبايل */
+  }
+
+  .about-text-box {
+    width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-title {
+    font-size: 2rem;
+  }
+
+  .about-text-box {
+    padding: 20px;
+  }
+}
+
+
+/* ✅ Responsive adjustments */
+
+/* شاشات كبيرة (من 1200 وأقل) */
+@media (max-width: 1200px) {
+  .about-title,
+  .sub-title {
+    margin-left: 400px;
+  }
+
+  .about-text-box {
+    width: 60%;
+    transform: translateY(-80px);
+  }
+}
+
+/* تابلت وأجهزة متوسطة */
+@media (max-width: 992px) {
+  .about-image-wrapper {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .horizontal-line {
+    display: none;
+  }
+
+  .about-title,
+  .sub-title {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .about-text-box {
+    width: 80%;
+    margin: 100px auto 0 auto;
+    transform: translateY(-50px);
+    padding: 20px;
+  }
+
+  .page-divider {
+    margin-top: 25px;
+    width: 90%;
+  }
+}
+
+/* موبايل */
+@media (max-width: 576px) {
+  .about-title {
+    font-size: 2rem;
+    margin-top: 30px;
+  }
+
+  .sub-title {
+    font-size: 1.1rem;
+  }
+
+  .about-text-box {
+    width: 90%;
+    padding: 15px;
+    margin-top: 60px;
+    transform: none;
+  }
+
+  .page-divider {
+    margin-top: 20px;
+  }
+}

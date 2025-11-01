@@ -1,0 +1,148 @@
+.contact-page {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* تغطية الصورة كلها بلون غامق */
+.dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* الصندوق اللي جوه overlay */
+.contact-box {
+  background: rgba(34, 28, 45, 0.9); /* بنفسجي رمادي غامق */
+  padding: 40px 80px;
+  /*border-radius: 20px;*/
+  color: #fff;
+  text-align: left;
+  box-shadow: 0 8px 30px rgba(202, 160, 255, 0.3);
+  max-width: 600px;
+  width: 90%;
+}
+
+.contact-box h1 {
+  font-size: 4rem;
+  font-family: "Bungee", sans-serif;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contact-box h1 span {
+  color: #caa0ff;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-left: 95px; 
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  justify-content: flex-start;
+}
+
+.contact-item i {
+  font-size: 1.4rem;
+  color: #caa0ff;
+  transition: transform 0.3s ease;
+  width: 25px; 
+  text-align: center;
+}
+
+
+.contact-item a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-item:hover i {
+  transform: scale(1.2);
+  color: #fff;
+}
+
+.contact-item:hover a {
+  color: #ffcc66;
+}
+
+
+/* -------------------- Responsive Section -------------------- */
+@media (max-width: 992px) {
+  .contact-box {
+    padding: 40px 50px;
+  }
+  .contact-info {
+    padding-left: 100px;
+  }
+  .contact-box h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    height: auto;
+    padding: 60px 0;
+  }
+
+  .contact-box {
+    padding: 30px 30px;
+    max-width: 90%;
+  }
+
+  .contact-box h1 {
+    font-size: 2rem;
+  }
+
+  .contact-info {
+    padding-left: 0;
+    align-items: center;
+  }
+
+  .contact-item {
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+
+  .contact-item i {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-box {
+    padding: 25px 20px;
+  }
+
+  .contact-box h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-item {
+    font-size: 1rem;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contact-item i {
+    font-size: 1.2rem;
+  }
+}
