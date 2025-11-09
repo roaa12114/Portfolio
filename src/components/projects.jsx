@@ -56,7 +56,7 @@ const projects = [
   description:
     "A browser-based guessing game built with modular JavaScript and DOM manipulation, featuring persistent gameplay through local storage and mobile-friendly design.",
   techStack: "HTML, CSS, JavaScript",
-  viewLink: "https://guess-the-word-game-hangaroo-git-20c6f2-roaas-projects-0573a9b6.vercel.app/",
+  viewLink: "https://guess-the-word-game-hangaroo-clone.vercel.app/",
   githubLink: "https://github.com/roaa12114/Guess-the-Word-Game---Hangaroo-Clone"
 },
 {
@@ -66,7 +66,7 @@ const projects = [
   description:
     "An interactive JavaScript-based mini-game with real-time score tracking and responsive UI for seamless browser play.",
   techStack: "HTML, CSS, JavaScript",
-  viewLink: "#",
+  viewLink: "https://rock-paper-scissor-game-tawny-gamma.vercel.app/",
   githubLink: "https://github.com/roaa12114/Rock-Paper-Scissor-Game"
 }
 ];
@@ -95,15 +95,15 @@ function Projects(){
               <h2>{project.title}</h2>
               <p className="text-sm text-gray-600 mt-2">{project.description}</p>
               <p> <strong>Tech Stack:</strong> {project.techStack}</p>
+             
               <div className="buttons">
-                {project.title === "Chat-app" ? (
-                <a 
-                   href="" 
-                   className="btn view"
-                    onClick={(e) => handleUnavailableDemo(e, project.title)}
-                >
-                    View
-                </a>
+                {project.viewLink === "#" || project.viewLink === "" ? (
+                <button
+      className="btn view"
+      onClick={() => alert(`🚧 The live demo for "${project.title}" is not available yet.`)}
+    >
+      View
+    </button>
                 ):(
                     <a
                     href={project.viewLink}
