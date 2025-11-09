@@ -46,7 +46,7 @@ const projects = [
   description:
     "A real-time client–server chat app using multithreading and TCP sockets, demonstrating strong understanding of concurrency and network communication in C#.",
   techStack: "C#, .NET Framework, TCP Sockets",
-  viewLink: "",
+  viewLink: "#",
   githubLink: "https://github.com/roaa12114/Chat-application"
 },
 {
@@ -97,7 +97,7 @@ function Projects(){
               <p> <strong>Tech Stack:</strong> {project.techStack}</p>
              
               <div className="buttons">
-                {project.viewLink === "#" || project.viewLink === "" ? (
+                {project.viewLink === "#" || project.viewLink === "#" ? (
                 <button
       className="btn view"
       onClick={() => alert(`🚧 The live demo for "${project.title}" is not available yet.`)}
