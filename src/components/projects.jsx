@@ -72,12 +72,7 @@ const projects = [
 ];
 
 function Projects(){
-  const handleUnavailableDemo = (e, projectTitle) => {
-    e.preventDefault();
-    alert(`Sorry, the live demo for "${projectTitle}" is not available yet.`);
-  };
-
-  
+   
   return (
     <div id="projects" className='projects-page'>
         <h1>
